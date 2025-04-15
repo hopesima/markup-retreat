@@ -1,1 +1,27 @@
-/* Пиши стили тут */
+.stars-container {
+    display: flex;
+    gap: 10px;
+    flex-direction: row-reverse;
+    justify-content: center;
+  }
+  
+  .stars-container input {
+    display: none;
+  }
+  
+  .star {
+    background-image: url("img/star-empty.svg");
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background-size: cover;
+  }
+  
+  .star:hover,
+  .star:hover ~ .star {
+    background-image: url("img/star.svg");
+  }
+  
+  .stars-container input:checked ~ label.star {
+    background-image: url("img/star.svg");
+  }
